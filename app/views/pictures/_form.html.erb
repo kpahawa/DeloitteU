@@ -15,10 +15,26 @@
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>
-  <div class="field">
-    <%= f.label :url %><br>
-    <%= f.text_field :url %>
-  </div>
+    <!--<div class="ui top attached tabular menu">-->
+      <!--<a class="active item">-->
+        <!--Upload by URL-->
+      <!--</a>-->
+      <!--<div class="ui bottom attached active tab segment">-->
+        <!--<div class="field">-->
+          <!--< f.label :url %><br>-->
+          <!--< f.text_field :url %>-->
+        <!--</div>-->
+      <!--</div>-->
+      <!--<a class="item">-->
+        <!--Tab-->
+      <!--</a>-->
+    <!--</div>
+   -->
+   <div class="field">
+     <%= f.label :url %> <br />
+     <%= f.file_field :url %>
+   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
