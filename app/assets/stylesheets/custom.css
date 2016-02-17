@@ -1,3 +1,11 @@
 #homeCards {
     width: 80%;
 }
+
+#picColumn {
+    width:inherit !important;
+}
+
+#showButton {
+    font-size:large;
+}

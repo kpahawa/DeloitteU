@@ -1,22 +1,30 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Pictures</h1>
-
-<div class="container">
-
+<div class="ui two column doubling stackable grid">
+  <% @pictures.each do |pic| %>
+      <div class="column" id="picColumn">
+        <a class="image" href="/pictures/<%= pic.id %>">
+          <div class="ui special cards">
+            <div class = "green card">
+              <div class = "dimmable image">
+                <div class="ui dimmer">
+                  <div class="content">
+                    <div class="center">
+                      <%= link_to 'Show', pic, :class => 'ui green button' , :id => 'showButton' %>
+                    </div>
+                  </div>
+                </div>
+                <img src="<%= pic.url %>" class="homePic">
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+  <%end%>
 </div>
-<% c = 1 %>
-<%@pictures.each do |p| %>
-    <% if c % 3 == 1 %>
-        <div class="ui three wide column">
 
-        </div>
-    <% else %>
-    
-    <%end%>
-
-    <img src="<%= p.url %>">
-<%end%>
+<br />
 
 <!--<table>-->
   <!--<thead>-->
@@ -43,3 +51,8 @@
 <br>
 
 <%= link_to 'New Picture', new_picture_path,:class => 'ui blue button' %>
+<script>
+  $('.special.cards .image').dimmer({
+    on: 'hover'
+  });
+</script>
