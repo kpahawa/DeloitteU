@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
+  devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  get 'twilio/text' => 'twilio#text'
-  get 'twilio/process_sms' => 'twilio#process_sms'
+  # get 'twilio/text' => 'twilio#text'
+  # get 'twilio/process_sms' => 'twilio#process_sms'
   resources :pictures
   root 'pictures#index'
   # Example of regular route:

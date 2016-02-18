@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Pictures</h1>
+<h1 class="pageHeader">Listing Pictures</h1>
 <div class="ui two column doubling stackable grid">
   <% @pictures.each do |pic| %>
       <div class="column" id="picColumn">
         <a class="image" href="/pictures/<%= pic.id %>">
           <div class="ui special cards">
-            <div class = "green card">
+            <div class = "green card" id="picCard">
               <div class = "dimmable image">
                 <div class="ui dimmer">
                   <div class="content">

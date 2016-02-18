@@ -1,5 +1,12 @@
-<h1>New Picture</h1>
+<h1 class="centerStuff">New Picture</h1>
+<% if user_signed_in? %>
+    <% if current_user.email== "kpahawa@gmail.com" %>
 
-<%= render 'form' %>
-
-<%= link_to 'Back', pictures_path %>
+        <%= render 'form' %>
+    <% end %>
+<% else %>
+  <h2 class="centerStuff"> Sorry, this feature is coming soon! </h2>
+    <div class="container centerStuff">
+      <%= link_to 'Back', pictures_path, :class => 'ui blue button', style: "width: 55%; margin-bottom: 2em;" %>
+    </div>
+<% end %>

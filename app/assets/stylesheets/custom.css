@@ -3,9 +3,28 @@
 }
 
 #picColumn {
-    width:inherit !important;
+    /*width:inherit !important;*/
 }
 
 #showButton {
     font-size:large;
+}
+
+#picCard {
+    width: 70% !important;
+    margin-right:-5em;
+    margin-left:5em;
+}
+
+.pageHeader {
+    text-align: center;
+}
+
+.picContainer {
+    height: 75% !important;
+    width: 75% !important;
+}
+
+.centerStuff {
+    text-align: center;
 }
