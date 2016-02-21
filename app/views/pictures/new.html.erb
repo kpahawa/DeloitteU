@@ -3,10 +3,16 @@
     <% if current_user.email== "kpahawa@gmail.com" %>
 
         <%= render 'form' %>
+    <% else %>
+        <h2 class="centerStuff"> Sorry, this feature is coming soon! </h2>
+        <div class="container centerStuff">
+          <%= link_to 'Back', pictures_path, :class => 'ui blue button', style: "width: 55%; margin-bottom: 2em; line-height:3;" %>
+        </div>
     <% end %>
+
 <% else %>
   <h2 class="centerStuff"> Sorry, this feature is coming soon! </h2>
     <div class="container centerStuff">
-      <%= link_to 'Back', pictures_path, :class => 'ui blue button', style: "width: 55%; margin-bottom: 2em;" %>
+      <%= link_to 'Back', pictures_path, :class => 'ui blue button', style: "width: 55%; margin-bottom: 2em;line-height:3;" %>
     </div>
 <% end %>

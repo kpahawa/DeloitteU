@@ -49,8 +49,9 @@
 <!--</table>-->
 
 <br>
-
-<%= link_to 'Upload a new Picture', new_picture_path,:class => 'ui blue button' %>
+<div class="container centerStuff" id="uploadButtonContainer">
+  <%= link_to 'Upload a new Picture', new_picture_path,:class => 'ui blue button', style: "width: 100%;line-height:3;" %>
+</div>
 <script>
   $('.special.cards .image').dimmer({
     on: 'hover'

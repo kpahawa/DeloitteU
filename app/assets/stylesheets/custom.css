@@ -28,3 +28,31 @@
 .centerStuff {
     text-align: center;
 }
+
+#uploadButtonContainer {
+    margin: 1.5em;
+}
+
+#notice {
+    text-align: center;
+    font-size: large;
+    margin: 2em;
+}
+
+.sessionButtons {
+    font-size: x-large;
+    line-height:3;
+}
+
+.formField {
+    width: 50% !important;
+}
+#deviseForm {
+    margin-top: 1em;
+}
+
+#logOutButton {
+    line-height: 1;
+    height: 50%;
+    font-size: large;
+}

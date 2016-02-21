@@ -33,8 +33,16 @@
         <!-- Following Menu -->
         <div class="ui large top fixed menu transition hidden">
           <div class="ui container">
-                <a class="<%= 'active ' if current_page?(root_path) %>item" href="/">Home</a>
-                <a class="<%= 'active ' if current_page?(new_picture_path) %>item" href="/pictures/new">Upload Picture</a>
+                <a class="toc item" style="width: 20%;" href="/">
+                  <img src="/assets/Deloittelogo.svg.png" style="width:100%; height: 150%;"/>
+                </a>
+                <a class="<%= 'active ' if current_page?(root_path) %>item" href="/" style="font-size: x-large;">Home</a>
+                <a class="<%= 'active ' if current_page?(new_picture_path) %>item" href="/pictures/new" style="font-size: x-large;">Upload Picture</a>
+                <% if user_signed_in? %>
+                    <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'ui red button', style: 'line-height: 3'%>
+                <%else%>
+                    <a class="<%='active ' if current_page?(new_user_session_path) %>item" href="/users/sign_in" style="font-size: x-large;">Login</a>
+                <%end%>
           </div>
         </div>
 
@@ -42,18 +50,34 @@
             <div class="ui inverted vertical masthead center aligned segment" id="nav-bar">
               <div class="ui container">
                 <div class="ui large secondary inverted pointing menu">
-                  <a class="toc item" style="width: 20%;">
-                    <img src="/assets/Deloitte.svg.png" style="width:100%; height: 150%;"/>
+                  <a class="toc item" style="width: 20%;" href="/">
+                    <img src="/assets/Deloittelogo.svg.png" style="width:100%; height: 150%;"/>
                   </a>
-                  <a class="<%= 'active ' if current_page?(root_path) %>item" href="/">Home</a>
-                  <a class="<%= 'active ' if current_page?(new_picture_path) %>item" href="/pictures/new">Upload Picture</a>
+                  <a class="<%= 'active ' if current_page?(root_path) %>item" href="/" style="margin-left: 2em; font-size: x-large;">Home</a>
+                  <a class="<%= 'active ' if current_page?(new_picture_path) %>item" href="/pictures/new" style="font-size: x-large;">Upload Picture</a>
+                  <% if user_signed_in? %>
+                      <%= link_to current_user.email.split("@")[0]+" -- Logout", destroy_user_session_path, method: :delete, :class => 'ui red button' , id: 'logOutButton'%>
+                  <%else%>
+                      <a class="<%='active ' if current_page?(new_user_session_path) %>item" href="/users/sign_in" style="font-size: x-large;">Login</a>
+                  <%end%>
                 </div>
               </div>
             </div>
+          <!--<div class="container centerStuff">-->
+            <!--<br>-->
+            <!--<% if user_signed_in? %>-->
+                <!--&lt;!&ndash;<% if current_user.email== "kpahawa@gmail.com" %>&ndash;&gt;-->
+                    <!--Logged in as <strong><%= current_user.email %></strong>.-->
+                    <!--<%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'ui inverted red button' , style: 'font-size:x-large;'%>-->
+                <!--&lt;!&ndash;<%end%>&ndash;&gt;-->
+            <!--<%end%>-->
+            <!--<br>-->
+          <!--</div>-->
             <%= yield %>
           <!--this is where the footer goes-->
             <div class="ui inverted vertical footer segment">
               <div class="ui container">
+                <h5 style="text-align: center; font-size: small;">Website made by Karan Pahawa</h5>
               </div>
             </div>
         </div>

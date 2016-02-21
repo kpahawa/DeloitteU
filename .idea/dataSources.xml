@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="1328945020">
+    <data-source source="LOCAL" name="Rails DeloitteU: development" uuid="ef442d6e-78d5-4ba6-9138-8d79ee1cb68e">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:DeloitteU_development</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails DeloitteU: test" uuid="c76a7d7d-e3f1-49c5-95f0-38c863e36e3c">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:DeloitteU_test</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails DeloitteU: production" uuid="14ed1fb8-e100-479e-9634-dac2e7480936">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql:DeloitteU_production</jdbc-url>
+      <libraries />
+    </data-source>
+  </component>
+</project>
