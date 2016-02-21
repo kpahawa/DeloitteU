@@ -1,4 +1,4 @@
-<%= form_for(@picture) do |f| %>
+<%= form_for(@picture, html: {:class => 'ui form'}) do |f| %>
   <% if @picture.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@picture.errors.count, "error") %> prohibited this picture from being saved:</h2>
@@ -11,9 +11,9 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field" style="text-align: center;">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: 'formField' %>
   </div>
     <!--<div class="ui top attached tabular menu"> -->
     <!--<div class="ui bottom attached active tab segment">-->
@@ -32,10 +32,10 @@
    -->
    <div class="field">
      <%= f.label :url %> <br />
-     <%= f.file_field :url %>
+     <%= f.text_field :url, class: 'formField' %>
    </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Update!',  class: "ui green button submitButton"%>
   </div>
 <% end %>

@@ -16,7 +16,9 @@
 
 <% if user_signed_in? %>
     <% if current_user.email== "kpahawa@gmail.com" %>
-
-        <%= link_to 'Edit', edit_picture_path(@picture),:class => 'ui red button' %>
+        <div class="container centerStuff" style="margin-bottom: .5em;">
+          <%= link_to 'Edit', edit_picture_path(@picture),:class => 'ui orange button' %> |
+          <%= link_to 'Destroy', @picture, method: :delete, data: { confirm: 'Are you sure?' } ,:class => 'ui red button'%>
+        </div>
     <%end%>
 <%end%>

@@ -56,3 +56,13 @@
     height: 50%;
     font-size: large;
 }
+
+.renderButtons {
+    line-height: 3 !important;
+    width: 25%;
+}
+
+.submitButton {
+    line-height: 3 !important;
+    width: 50%;
+}
