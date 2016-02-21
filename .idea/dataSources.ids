@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="Rails DeloitteU: development" uuid="ef442d6e-78d5-4ba6-9138-8d79ee1cb68e">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="Rails DeloitteU: test" uuid="c76a7d7d-e3f1-49c5-95f0-38c863e36e3c">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="Rails DeloitteU: production" uuid="14ed1fb8-e100-479e-9634-dac2e7480936">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

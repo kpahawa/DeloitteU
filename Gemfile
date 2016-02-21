@@ -5,6 +5,7 @@ gem 'pry-nav'
 gem 'devise'
 gem 'sinatra'
 gem 'twilio-ruby'
+gem 'rails_12factor', group: :production
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
