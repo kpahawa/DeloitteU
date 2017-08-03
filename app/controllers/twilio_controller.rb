@@ -8,8 +8,8 @@ class TwilioController < ApplicationController
   after_filter :set_header
 
   skip_before_action :verify_authenticity_token
-  account_sid = 'AC3ca02afa67ad901413bd92f9c366bc0b'
-  auth_token = '38e79147f091e0a116b9d261794112fb'
+  account_sid = ''
+  auth_token = ''
 
   # set up a client to talk to the Twilio REST API
   @client = Twilio::REST::Client.new account_sid, auth_token
